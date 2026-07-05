@@ -21,7 +21,7 @@ export function ExperienceSummary() {
         <div className="mt-10 space-y-6">
           {experience.slice(0, 3).map((item) => (
             <div
-              key={item.role + item.company}
+              key={item.role + item.period}
               className="flex gap-5 rounded-2xl border border-navy-900/10 bg-white p-6"
             >
               <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy-950/5 text-navy-900">
