@@ -12,6 +12,7 @@ import { CookieBanner } from "@/components/consent/CookieBanner";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
 import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { organizationSchema } from "@/lib/schema";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 import "../globals.css";
 
 const inter = Inter({
@@ -77,7 +78,7 @@ export default async function LocaleLayout({
       <body className="flex min-h-screen flex-col bg-white text-slate-900">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationSchema()) }}
         />
         <NextIntlClientProvider>
           <ConsentProvider>

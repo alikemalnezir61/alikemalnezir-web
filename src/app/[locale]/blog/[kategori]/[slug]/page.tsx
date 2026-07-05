@@ -16,6 +16,7 @@ import { ShareButtons } from "@/components/share/ShareButtons";
 import { splitContentInHalf } from "@/lib/split-content";
 import { TrackView } from "@/components/analytics/TrackView";
 import { breadcrumbSchema } from "@/lib/schema";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export function generateStaticParams() {
   const locales = ["tr", "en"];
@@ -90,11 +91,11 @@ export default async function BlogPostPage({
     <Container className="py-16 sm:py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbs) }}
       />
       <TrackView eventName="blog_view" params={{ slug: post.slug, category: post.category }} />
 

@@ -17,6 +17,7 @@ import { NewsletterCard } from "@/components/newsletter/NewsletterCard";
 import { TrackView } from "@/components/analytics/TrackView";
 import { siteConfig } from "@/content/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export function generateStaticParams() {
   const locales = ["tr", "en"];
@@ -98,11 +99,11 @@ export default async function EventDetailPage({
     <Container className="py-16 sm:py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbs) }}
       />
       <TrackView eventName="event_view" params={{ slug: event.slug }} />
 

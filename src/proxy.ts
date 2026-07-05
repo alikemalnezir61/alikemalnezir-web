@@ -1,10 +1,11 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { constantTimeEqual } from "./lib/constant-time-equal";
 
 const intlMiddleware = createMiddleware(routing);
 
-function isAuthorized(request: NextRequest): boolean {
+async function isAuthorized(request: NextRequest): Promise<boolean> {
   const user = process.env.ADMIN_BASIC_AUTH_USER;
   const password = process.env.ADMIN_BASIC_AUTH_PASSWORD;
 
@@ -18,7 +19,12 @@ function isAuthorized(request: NextRequest): boolean {
   const reqUser = decoded.slice(0, separatorIndex);
   const reqPassword = decoded.slice(separatorIndex + 1);
 
-  return reqUser === user && reqPassword === password;
+  const [userMatch, passwordMatch] = await Promise.all([
+    constantTimeEqual(reqUser, user),
+    constantTimeEqual(reqPassword, password),
+  ]);
+
+  return userMatch && passwordMatch;
 }
 
 function unauthorizedResponse() {
@@ -28,9 +34,11 @@ function unauthorizedResponse() {
   });
 }
 
-export default function middleware(request: NextRequest) {
+export default async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/admin")) {
-    return isAuthorized(request) ? NextResponse.next() : unauthorizedResponse();
+    return (await isAuthorized(request))
+      ? NextResponse.next()
+      : unauthorizedResponse();
   }
 
   return intlMiddleware(request);

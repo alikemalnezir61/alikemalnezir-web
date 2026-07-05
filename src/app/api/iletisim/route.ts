@@ -3,8 +3,18 @@ import { Resend } from "resend";
 import { siteConfig } from "@/content/site";
 import { verifyRecaptcha } from "@/lib/recaptcha";
 import { isRateLimited } from "@/lib/rate-limit";
+import { getClientIp } from "@/lib/get-client-ip";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const MAX_LENGTHS = {
+  name: 100,
+  email: 254,
+  phone: 30,
+  company: 200,
+  subject: 200,
+  message: 5000,
+};
 
 const requestTypeLabels: Record<string, string> = {
   consulting: "Proje Yönetimi Danışmanlığı",
@@ -24,8 +34,7 @@ function escapeHtml(value: string) {
 }
 
 export async function POST(request: Request) {
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  const ip = getClientIp(request);
 
   if (isRateLimited(`contact:${ip}`)) {
     return NextResponse.json({ error: "rate-limited" }, { status: 429 });
@@ -52,6 +61,17 @@ export async function POST(request: Request) {
 
   if (!name || !email || !subject || !message || !EMAIL_REGEX.test(email)) {
     return NextResponse.json({ error: "invalid-fields" }, { status: 400 });
+  }
+
+  if (
+    name.length > MAX_LENGTHS.name ||
+    email.length > MAX_LENGTHS.email ||
+    phone.length > MAX_LENGTHS.phone ||
+    company.length > MAX_LENGTHS.company ||
+    subject.length > MAX_LENGTHS.subject ||
+    message.length > MAX_LENGTHS.message
+  ) {
+    return NextResponse.json({ error: "field-too-long" }, { status: 400 });
   }
 
   const recaptchaResult = await verifyRecaptcha(body.recaptchaToken);

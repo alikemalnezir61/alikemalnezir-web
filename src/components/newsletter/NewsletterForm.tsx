@@ -71,6 +71,15 @@ export function NewsletterForm() {
         </option>
       </select>
 
+      <input
+        type="text"
+        name="company_website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden"
+      />
+
       <label className="flex items-start gap-2.5 text-xs leading-5 text-slate-500">
         <input
           type="checkbox"

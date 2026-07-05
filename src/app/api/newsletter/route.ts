@@ -1,12 +1,18 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { isRateLimited } from "@/lib/rate-limit";
+import { getClientIp } from "@/lib/get-client-ip";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const MAX_LENGTHS = {
+  name: 100,
+  email: 254,
+  interest: 50,
+};
+
 export async function POST(request: Request) {
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  const ip = getClientIp(request);
 
   if (isRateLimited(`newsletter:${ip}`)) {
     return NextResponse.json({ error: "rate-limited" }, { status: 429 });
@@ -18,12 +24,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid-body" }, { status: 400 });
   }
 
+  if (String(body.company_website ?? "").length > 0) {
+    // Honeypot alanı doldurulmuş, bot isteği — sessizce başarı dön
+    return NextResponse.json({ ok: true });
+  }
+
   const name = String(body.name ?? "").trim();
   const email = String(body.email ?? "").trim();
   const interest = String(body.interest ?? "").trim();
 
   if (!name || !email || !interest || !EMAIL_REGEX.test(email)) {
     return NextResponse.json({ error: "invalid-fields" }, { status: 400 });
+  }
+
+  if (
+    name.length > MAX_LENGTHS.name ||
+    email.length > MAX_LENGTHS.email ||
+    interest.length > MAX_LENGTHS.interest
+  ) {
+    return NextResponse.json({ error: "field-too-long" }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

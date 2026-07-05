@@ -7,6 +7,7 @@ import { CertificationsSummary } from "@/components/home/CertificationsSummary";
 import { SponsorsHome } from "@/components/home/SponsorsHome";
 import { CtaSection } from "@/components/home/CtaSection";
 import { siteConfig } from "@/content/site";
+import { safeJsonLd } from "@/lib/safe-json-ld";
 
 export default async function HomePage({
   params,
@@ -34,7 +35,7 @@ export default async function HomePage({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <Hero />
       <Intro />
