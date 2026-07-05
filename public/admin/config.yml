@@ -2,7 +2,7 @@ backend:
   name: github
   repo: alikemalnezir61/alikemalnezir-web
   branch: main
-  base_url: https://alikemalnezir.com
+  base_url: https://alikemalnezir-web.vercel.app
   auth_endpoint: api/decap/auth
 
 local_backend: true

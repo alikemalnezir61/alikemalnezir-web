@@ -4,5 +4,5 @@ export const siteConfig = {
   email: "alikemalnezir@gmail.com",
   linkedin: "https://www.linkedin.com/in/ali-kemal-nezir-677365143/",
   location: "İstanbul, Türkiye",
-  url: "https://alikemalnezir.com",
+  url: "https://alikemalnezir.com.tr",
 };
