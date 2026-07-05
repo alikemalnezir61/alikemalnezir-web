@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: OWNER/REPO
+  repo: alikemalnezir61/alikemalnezir-web
   branch: main
   base_url: https://alikemalnezir.com
   auth_endpoint: api/decap/auth
