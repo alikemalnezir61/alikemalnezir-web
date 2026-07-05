@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Ali Kemal Nezir",
-    "defaultTitle": "Ali Kemal Nezir | Technical Project Manager",
-    "defaultDescription": "Personal website of Ali Kemal Nezir, a Technical Project Manager with 10+ years of experience in IT projects, healthcare informatics, critical infrastructure and digital transformation."
+    "defaultTitle": "Ali Kemal Nezir | Project Manager",
+    "defaultDescription": "Personal website of Ali Kemal Nezir, a Project Manager with 10+ years of experience in IT projects, healthcare informatics, critical infrastructure and digital transformation."
   },
   "nav": {
     "home": "Home",
@@ -10,6 +10,7 @@
     "experience": "Experience",
     "approach": "My PM Approach",
     "blog": "Blog",
+    "events": "Events",
     "services": "Services",
     "certifications": "Certifications",
     "contact": "Contact",
@@ -26,11 +27,12 @@
     "minRead": "min read",
     "allCategories": "All Categories",
     "downloadCv": "Download CV",
-    "viewLinkedin": "View LinkedIn"
+    "viewLinkedin": "View LinkedIn",
+    "share": "Share"
   },
   "home": {
     "hero": {
-      "eyebrow": "Technical Project Manager",
+      "eyebrow": "Project Manager",
       "title": "Delivering Complex IT and Infrastructure Projects",
       "subtitle": "For over 10 years, I have been creating value for organizations in healthcare informatics, critical infrastructure and digital transformation projects — from end-to-end project management to PMO setup and operational process improvement.",
       "primaryCta": "View My Experience",
@@ -39,7 +41,7 @@
     },
     "intro": {
       "title": "About Me",
-      "body": "I am a PMP-certified Technical Project Manager. Throughout my career, I have taken responsibility in ICT project management, HIS integration, data center operations and team leadership across large-scale healthcare institutions and critical infrastructure projects. I combine Agile and traditional project management approaches to bridge the gap between technical teams and executive management."
+      "body": "I am a PMP-certified Project Manager. Throughout my career, I have taken responsibility in ICT project management, HIS integration, data center operations and team leadership across large-scale healthcare institutions and critical infrastructure projects. I combine Agile and traditional project management approaches to bridge the gap between technical teams and executive management."
     },
     "expertise": {
       "title": "Areas of Expertise",
@@ -66,11 +68,15 @@
     }
   },
   "footer": {
-    "tagline": "Technical Project Manager — IT, Healthcare Informatics and Critical Infrastructure Projects",
+    "tagline": "Project Manager — IT, Healthcare Informatics and Critical Infrastructure Projects",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "kvkk": "KVKK Privacy Notice",
+    "cookiePolicy": "Cookie Policy",
+    "termsOfUse": "Terms of Use",
+    "cookiePreferences": "Cookie Preferences"
   },
   "contact": {
     "title": "Contact",
@@ -78,16 +84,46 @@
     "form": {
       "name": "Full Name",
       "email": "Email",
+      "phone": "Phone (optional)",
       "company": "Company (optional)",
+      "requestType": "Request Type",
+      "requestTypeOptions": {
+        "consulting": "Project Management Consulting",
+        "speaking": "Event / Speaker Invitation",
+        "collaboration": "Blog / Collaboration",
+        "training": "Training Request",
+        "other": "Other"
+      },
       "subject": "Subject",
       "message": "Your Message",
+      "kvkkConsent": "I consent to my personal data being processed under the KVKK Privacy Notice.",
       "submit": "Send",
       "success": "Your message has been received, I'll get back to you shortly.",
-      "error": "Something went wrong, please try again or email me directly."
+      "error": "Something went wrong, please try again or email me directly.",
+      "rateLimited": "Too many attempts, please try again later.",
+      "consentRequired": "You must accept the KVKK consent to continue."
     },
     "directEmail": "Email",
     "location": "Location",
     "locationValue": "Istanbul, Turkey"
+  },
+  "newsletter": {
+    "title": "Subscribe to My Newsletter",
+    "subtitle": "Stay up to date with my blog posts and event announcements.",
+    "name": "Full Name",
+    "email": "Email",
+    "interest": "Area of Interest",
+    "interestOptions": {
+      "blog": "Blog",
+      "events": "Events",
+      "projectManagement": "Project Management",
+      "digitalTransformation": "Digital Transformation"
+    },
+    "kvkkConsent": "I consent to my personal data being processed under KVKK and used to send newsletter emails.",
+    "submit": "Subscribe",
+    "success": "Your subscription has been received, thank you!",
+    "error": "Something went wrong, please try again.",
+    "consentRequired": "You must accept the KVKK consent to continue."
   },
   "blog": {
     "title": "Blog",
@@ -96,5 +132,48 @@
     "publishedOn": "Published on",
     "tags": "Tags",
     "empty": "No articles in this category yet."
+  },
+  "sponsors": {
+    "homeTitle": "Sponsors and Collaborations",
+    "homeSubtitle": "Organizations I collaborate with on content and events.",
+    "homePlaceholder": "You could sponsor this space — get in touch",
+    "eventTitle": "Event Sponsors",
+    "eventPlaceholder": "You could sponsor this event"
+  },
+  "cookieBanner": {
+    "message": "We use cookies to improve your experience on the site. Necessary cookies are always active; we ask for your consent for analytics and advertising cookies. See our",
+    "linkLabel": "Cookie Policy",
+    "messageSuffix": "for details.",
+    "necessaryOnly": "Necessary Only",
+    "managePreferences": "Manage Preferences",
+    "acceptAll": "Accept All"
+  },
+  "cookieModal": {
+    "title": "Cookie Preferences",
+    "close": "Close",
+    "description": "Necessary cookies are always active for the site to function. You can turn other categories on or off as you wish.",
+    "necessaryTitle": "Necessary Cookies",
+    "necessaryDescription": "Required for the site's core functions, cannot be disabled.",
+    "alwaysOn": "Always On",
+    "analyticsTitle": "Analytics Cookies",
+    "analyticsDescription": "Allow us to anonymously analyze visitor behavior via Google Analytics (GA4) and Microsoft Clarity.",
+    "advertisingTitle": "Advertising Cookies",
+    "advertisingDescription": "Allow advertising providers such as Google AdSense to show you relevant ads.",
+    "marketingTitle": "Marketing Cookies",
+    "marketingDescription": "Used to personalize newsletter subscriptions and marketing communications.",
+    "acceptAll": "Accept All",
+    "savePreferences": "Save Preferences",
+    "necessaryOnly": "Necessary Only"
+  },
+  "events": {
+    "filters": {
+      "all": "All",
+      "upcoming": "Upcoming Events",
+      "past": "Past Events",
+      "online": "Online Events",
+      "physical": "In-Person Events"
+    },
+    "backToEvents": "Back to Events",
+    "sponsors": "Sponsors"
   }
 }

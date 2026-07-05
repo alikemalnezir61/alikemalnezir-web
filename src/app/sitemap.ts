@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
 import { getAllPosts } from "@/lib/blog";
+import { getAllEvents } from "@/lib/events";
 import { routing } from "@/i18n/routing";
 
 const staticRoutes = [
@@ -9,10 +10,14 @@ const staticRoutes = [
   "/deneyimlerim",
   "/proje-yonetimi-yaklasimim",
   "/blog",
+  "/etkinlikler",
   "/hizmetler",
   "/sertifikalar",
   "/iletisim",
   "/gizlilik-politikasi",
+  "/kvkk-aydinlatma-metni",
+  "/cerez-politikasi",
+  "/kullanim-sartlari",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -32,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${siteConfig.url}${prefix}/blog/${post.category}/${post.slug}`,
         lastModified: new Date(post.date),
+      });
+    }
+
+    for (const event of getAllEvents(locale)) {
+      entries.push({
+        url: `${siteConfig.url}${prefix}/etkinlikler/${event.slug}`,
+        lastModified: new Date(event.date),
       });
     }
   }

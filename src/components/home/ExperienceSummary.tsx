@@ -35,7 +35,7 @@ export function ExperienceSummary() {
                   {item.role}
                 </h3>
                 <p className="text-sm font-medium text-slate-500">
-                  {item.company} · {item.sector}
+                  {item.company} · {item.sectors[0]}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   {item.summary}

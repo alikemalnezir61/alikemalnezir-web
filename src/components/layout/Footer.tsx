@@ -4,6 +4,8 @@ import { Logo } from "@/components/ui/Logo";
 import { Mail } from "lucide-react";
 import { LinkedinIcon } from "@/components/ui/LinkedinIcon";
 import { siteConfig } from "@/content/site";
+import { CookiePreferencesButton } from "@/components/consent/CookiePreferencesButton";
+import { TrackedExternalLink } from "@/components/analytics/TrackedExternalLink";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -14,6 +16,7 @@ export function Footer() {
     { href: "/deneyimlerim", label: tNav("experience") },
     { href: "/proje-yonetimi-yaklasimim", label: tNav("approach") },
     { href: "/blog", label: tNav("blog") },
+    { href: "/etkinlikler", label: tNav("events") },
     { href: "/hizmetler", label: tNav("services") },
     { href: "/sertifikalar", label: tNav("certifications") },
   ];
@@ -63,27 +66,37 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a
+              <TrackedExternalLink
                 href={siteConfig.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-slate-400 hover:text-white"
               >
                 <LinkedinIcon size={16} /> LinkedIn
-              </a>
+              </TrackedExternalLink>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-white/10 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 text-xs text-slate-500 sm:flex-row lg:px-8">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-xs text-slate-500 sm:flex-row lg:px-8">
           <p>
             © {new Date().getFullYear()} Ali Kemal Nezir. {t("rights")}
           </p>
-          <Link href="/gizlilik-politikasi" className="hover:text-white">
-            {t("privacy")}
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <Link href="/kvkk-aydinlatma-metni" className="hover:text-white">
+              {t("kvkk")}
+            </Link>
+            <Link href="/gizlilik-politikasi" className="hover:text-white">
+              {t("privacy")}
+            </Link>
+            <Link href="/cerez-politikasi" className="hover:text-white">
+              {t("cookiePolicy")}
+            </Link>
+            <Link href="/kullanim-sartlari" className="hover:text-white">
+              {t("termsOfUse")}
+            </Link>
+            <CookiePreferencesButton label={t("cookiePreferences")} variant="link" />
+          </div>
         </div>
       </div>
     </footer>

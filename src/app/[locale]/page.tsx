@@ -4,6 +4,7 @@ import { ExpertiseGrid } from "@/components/home/ExpertiseGrid";
 import { FeaturedBlog } from "@/components/home/FeaturedBlog";
 import { ExperienceSummary } from "@/components/home/ExperienceSummary";
 import { CertificationsSummary } from "@/components/home/CertificationsSummary";
+import { SponsorsHome } from "@/components/home/SponsorsHome";
 import { CtaSection } from "@/components/home/CtaSection";
 import { siteConfig } from "@/content/site";
 
@@ -41,6 +42,7 @@ export default async function HomePage({
       <FeaturedBlog locale={locale} />
       <ExperienceSummary />
       <CertificationsSummary />
+      <SponsorsHome />
       <CtaSection />
     </>
   );

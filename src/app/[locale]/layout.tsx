@@ -7,6 +7,11 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/content/site";
+import { ConsentProvider } from "@/components/consent/ConsentProvider";
+import { CookieBanner } from "@/components/consent/CookieBanner";
+import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
+import { AdSenseScript } from "@/components/ads/AdSenseScript";
+import { organizationSchema } from "@/lib/schema";
 import "../globals.css";
 
 const inter = Inter({
@@ -44,6 +49,11 @@ export async function generateMetadata({
       locale,
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("defaultTitle"),
+      description: t("defaultDescription"),
+    },
   };
 }
 
@@ -65,10 +75,19 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} antialiased`}>
       <body className="flex min-h-screen flex-col bg-white text-slate-900">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
         <NextIntlClientProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <ConsentProvider>
+            <AnalyticsScripts />
+            <AdSenseScript />
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CookieBanner />
+          </ConsentProvider>
         </NextIntlClientProvider>
       </body>
     </html>

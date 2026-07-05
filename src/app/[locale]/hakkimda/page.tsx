@@ -7,13 +7,30 @@ import { siteConfig } from "@/content/site";
 const copy = {
   tr: {
     eyebrow: "Hakkımda",
-    title: "Teknoloji ve Yönetim Arasında Köprü Kuran Bir Proje Yöneticisi",
+    title: "Teknoloji ile Stratejiyi Buluşturan Bir Proje Yöneticisi",
+    greeting: "Merhaba, ben Ali Kemal Nezir.",
     intro:
-      "10 yılı aşkın süredir bilgi teknolojileri proje yönetimi ve sağlık bilgi sistemleri (HBYS) alanında çalışıyorum. Kariyerim boyunca büyük ölçekli sağlık kurumları ve kritik altyapı projelerinde; teknik becerilerimi yönetimsel yaklaşımla birleştirerek operasyonel süreçlerin iyileştirilmesine katkı sağladım.",
+      "Yaklaşık 10 yılı aşkın süredir bilgi teknolojileri, proje yönetimi ve dijital dönüşüm alanlarında çalışıyorum. Kariyerim boyunca sağlık sektörü başta olmak üzere kritik öneme sahip teknoloji projelerinde görev alarak; teknik uzmanlığımı stratejik bakış açısıyla birleştirmeyi ve sürdürülebilir çözümler üretmeyi hedefledim.",
     paragraphs: [
-      "Kızılay Sağlık A.Ş, Liv Hospital ve Rönesans Holding gibi kurumlarda; altyapı yönetimi, HBYS entegrasyon süreçleri, HIMSS akreditasyon çalışmaları ve ekip yönetimi konularında güçlü bir liderlik sergiledim. Şu anda şehir hastaneleri kapsamında büyük ölçekli ICT projelerinin proje yöneticiliğini yürütüyorum.",
-      "Agile Scrum yöntemlerini kullanarak projelerin her aşamasını titizlikle takip ederken, müşteri taleplerini hızlıca değerlendirip verimli sonuçlar elde ediyorum. Teknik uzmanlığımın yanı sıra takım çalışmasına yatkın, çözüm odaklı ve proaktif bir çalışma anlayışına sahibim.",
-      "PMP® sertifikam ile proje yönetimi bilgi ve yetkinliklerimi uluslararası standartlarda belgelendirdim. Agile, Hybrid ve Waterfall metodolojilerini projenin doğasına uygun şekilde bir arada kullanıyorum.",
+      "Farklı ölçeklerdeki kurumlarda edindiğim deneyim sayesinde yalnızca teknik süreçleri değil, aynı zamanda ekip yönetimini, paydaş iletişimini, risk yönetimini ve operasyonel sürekliliği de proje başarısının ayrılmaz parçaları olarak görüyorum. Projelerin planlama aşamasından canlıya geçişine, operasyonel yönetiminden sürekli iyileştirme süreçlerine kadar tüm yaşam döngüsünü bütüncül bir yaklaşımla yönetiyorum.",
+      "Profesyonel kariyerim boyunca; sağlık bilişim sistemleri, veri merkezi altyapıları, sistem ve ağ operasyonları, bilgi güvenliği, yedekleme çözümleri, dijital dönüşüm projeleri ve kurumsal BT operasyonlarında önemli sorumluluklar üstlendim. Büyük ölçekli teknoloji projelerinde ekipler arasında koordinasyon sağlayarak, süreçlerin zamanında, kaliteli ve sürdürülebilir şekilde tamamlanmasına liderlik ettim.",
+      "Bugün odağım; yalnızca projeleri tamamlamak değil, kurumlara uzun vadeli değer kazandıran, ölçülebilir sonuçlar üreten ve iş hedeflerini teknolojiyle buluşturan çözümler geliştirmektir.",
+    ],
+    sections: [
+      {
+        heading: "Proje Yönetimi Yaklaşımım",
+        paragraphs: [
+          "Her projenin kendine özgü dinamikleri olduğuna inanıyorum. Bu nedenle tek bir metodolojiye bağlı kalmak yerine projenin ihtiyaçlarına göre Agile, Hybrid ve Waterfall yaklaşımlarını esnek biçimde uyguluyorum.",
+          "Karar alma süreçlerinde veriye dayalı analizleri, güçlü iletişimi ve şeffaf yönetimi ön planda tutuyor; ekiplerin ortak hedefe odaklanmasını sağlayacak bir çalışma kültürü oluşturmayı önemsiyorum. Benim için başarılı bir proje; yalnızca zamanında teslim edilen bir iş değil, aynı zamanda sürdürülebilir, güvenilir ve kurumun geleceğine katkı sağlayan bir başarı hikâyesidir.",
+        ],
+      },
+      {
+        heading: "Sürekli Gelişim ve Profesyonel Yaklaşım",
+        paragraphs: [
+          "Mesleki gelişimin sürekliliğine inanıyorum. Uluslararası geçerliliğe sahip PMP® (Project Management Professional) sertifikam ile proje yönetimi bilgi ve yetkinliklerimi uluslararası standartlarda belgelendirdim. Bunun yanında yeni teknolojileri, yapay zekâ uygulamalarını ve modern proje yönetimi yaklaşımlarını yakından takip ederek bunları gerçek projelere uyarlamaya önem veriyorum.",
+          "Bu web sitesinde proje yönetimi, dijital dönüşüm, bilgi teknolojileri, liderlik ve profesyonel gelişim üzerine deneyimlerimi, düşüncelerimi ve blog yazılarımı paylaşarak bilgi üretmeye ve sektöre katkı sağlamaya devam ediyorum.",
+        ],
+      },
     ],
     factsTitle: "Kısa Bilgiler",
     facts: [
@@ -27,13 +44,30 @@ const copy = {
   },
   en: {
     eyebrow: "About Me",
-    title: "A Project Manager Bridging Technology and Management",
+    title: "A Project Manager Bridging Technology and Strategy",
+    greeting: "Hello, I'm Ali Kemal Nezir.",
     intro:
-      "I have been working in IT project management and healthcare information systems (HIS) for over 10 years. Throughout my career, I have contributed to improving operational processes in large-scale healthcare institutions and critical infrastructure projects by combining technical skills with a management-oriented approach.",
+      "For over 10 years, I have been working in information technology, project management and digital transformation. Throughout my career, I have taken part in mission-critical technology projects, particularly in the healthcare sector, aiming to combine technical expertise with a strategic perspective and to deliver sustainable solutions.",
     paragraphs: [
-      "At organizations such as Kızılay Sağlık A.Ş, Liv Hospital and Rönesans Holding, I demonstrated strong leadership in infrastructure management, HIS integration processes, HIMSS accreditation efforts and team management. I currently manage large-scale ICT projects within city hospitals.",
-      "Using Agile Scrum methods, I closely track every phase of a project while quickly evaluating and implementing client requirements to achieve efficient results. Beyond technical expertise, I bring a collaborative, solution-oriented and proactive working style.",
-      "With my PMP® certification, I have formally validated my project management knowledge and competencies to an international standard. I combine Agile, Hybrid and Waterfall methodologies depending on the nature of each project.",
+      "Thanks to the experience I have gained across organizations of different scales, I see not only technical processes but also team management, stakeholder communication, risk management and operational continuity as inseparable parts of project success. I manage the entire project lifecycle holistically — from planning through go-live, and from operational management through continuous improvement.",
+      "Throughout my professional career, I have taken on significant responsibilities in healthcare information systems, data center infrastructure, systems and network operations, information security, backup solutions, digital transformation projects and enterprise IT operations. I have led large-scale technology projects by coordinating across teams, ensuring processes are completed on time, with quality, and in a sustainable way.",
+      "Today, my focus is not just completing projects, but developing solutions that bring long-term value to organizations, produce measurable results, and bring business goals and technology together.",
+    ],
+    sections: [
+      {
+        heading: "My Project Management Approach",
+        paragraphs: [
+          "I believe every project has its own unique dynamics. That's why, instead of sticking to a single methodology, I flexibly apply Agile, Hybrid and Waterfall approaches according to the needs of the project.",
+          "In decision-making, I prioritize data-driven analysis, strong communication and transparent management, and I care about building a working culture that keeps teams focused on a shared goal. For me, a successful project is not just one delivered on time — it is a success story that is sustainable, reliable, and contributes to the organization's future.",
+        ],
+      },
+      {
+        heading: "Continuous Growth and Professional Approach",
+        paragraphs: [
+          "I believe in continuous professional development. With my internationally recognized PMP® (Project Management Professional) certification, I have formally validated my project management knowledge and competencies to an international standard. Alongside this, I closely follow new technologies, AI applications and modern project management approaches, and place importance on adapting them to real projects.",
+          "On this website, I continue to share my experience, thoughts and blog posts on project management, digital transformation, information technology, leadership and professional development — contributing knowledge and value to the industry.",
+        ],
+      },
     ],
     factsTitle: "Quick Facts",
     facts: [
@@ -70,10 +104,22 @@ export default async function AboutPage({
       <div className="grid gap-12 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <SectionHeading eyebrow={c.eyebrow} title={c.title} />
-          <p className="mt-6 text-lg leading-8 text-slate-600">{c.intro}</p>
-          <div className="prose-content mt-6">
+          <p className="mt-6 text-lg font-semibold text-navy-950">
+            {c.greeting}
+          </p>
+          <div className="prose-content mt-4">
+            <p>{c.intro}</p>
             {c.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
+            ))}
+
+            {c.sections.map((section) => (
+              <div key={section.heading}>
+                <h2>{section.heading}</h2>
+                {section.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
             ))}
           </div>
           <div className="mt-8">
@@ -81,7 +127,7 @@ export default async function AboutPage({
           </div>
         </div>
 
-        <aside className="rounded-2xl border border-navy-900/10 bg-slate-50 p-6 h-fit">
+        <aside className="space-y-4 h-fit rounded-2xl border border-navy-900/10 bg-slate-50 p-6">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-navy-950">
             {c.factsTitle}
           </h3>

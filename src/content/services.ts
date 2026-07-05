@@ -7,6 +7,28 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    title: "Yazılım Proje Yönetimi",
+    description:
+      "Yazılım geliştirme projelerinin Agile/Scrum veya Hibrit yaklaşımlarla uçtan uca yönetimi.",
+    bullets: [
+      "Sprint planlama, backlog ve kapsam yönetimi",
+      "Geliştirme ekibi ile paydaşlar arasında koordinasyon",
+      "Teslimat kalitesi, zaman ve bütçe takibi",
+    ],
+    icon: "Code2",
+  },
+  {
+    title: "ICT Proje Yönetimi",
+    description:
+      "Büyük ölçekli ICT altyapı projelerinin (donanım, ağ, veri merkezi, saha kurulumu) yönetimi.",
+    bullets: [
+      "Teknik ve idari şartname, tedarik ve piyasa araştırması süreçleri",
+      "Saha ekipleri ve alt yüklenici koordinasyonu",
+      "Sistem entegrasyonu ve devreye alma (go-live) yönetimi",
+    ],
+    icon: "Network",
+  },
+  {
     title: "Proje Kurtarma ve Kriz Yönetimi",
     description:
       "Sarpmış, gecikmiş veya bütçesini aşan projelerin yeniden yapılandırılması.",

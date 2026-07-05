@@ -8,6 +8,14 @@ import { siteConfig } from "@/content/site";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
+import { AdBanner } from "@/components/ads/AdBanner";
+import { InlineAd } from "@/components/ads/InlineAd";
+import { SidebarAd } from "@/components/ads/SidebarAd";
+import { NewsletterCard } from "@/components/newsletter/NewsletterCard";
+import { ShareButtons } from "@/components/share/ShareButtons";
+import { splitContentInHalf } from "@/lib/split-content";
+import { TrackView } from "@/components/analytics/TrackView";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   const locales = ["tr", "en"];
@@ -55,6 +63,9 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const postUrl = `${siteConfig.url}/blog/${post.category}/${post.slug}`;
+  const [firstHalf, secondHalf] = splitContentInHalf(post.content);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -65,8 +76,15 @@ export default async function BlogPostPage({
       "@type": "Person",
       name: siteConfig.name,
     },
-    url: `${siteConfig.url}/blog/${post.category}/${post.slug}`,
+    url: postUrl,
   };
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Ana Sayfa", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: getCategoryLabel(post.category, locale), url: `${siteConfig.url}/blog/${post.category}` },
+    { name: post.title, url: postUrl },
+  ]);
 
   return (
     <Container className="py-16 sm:py-20">
@@ -74,6 +92,11 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <TrackView eventName="blog_view" params={{ slug: post.slug, category: post.category }} />
 
       <Link
         href="/blog"
@@ -82,41 +105,68 @@ export default async function BlogPostPage({
         <ArrowLeft size={16} /> {tCommon("backToBlog")}
       </Link>
 
-      <article className="mx-auto mt-8 max-w-3xl">
-        <span className="text-sm font-semibold uppercase tracking-wide text-accent-500">
-          {getCategoryLabel(post.category, locale)}
-        </span>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-navy-950 sm:text-4xl">
-          {post.title}
-        </h1>
-        <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
-          <time dateTime={post.date}>
-            {new Date(post.date).toLocaleDateString(
-              locale === "en" ? "en-US" : "tr-TR",
-              { year: "numeric", month: "long", day: "numeric" }
-            )}
-          </time>
-          <span>·</span>
-          <span>{post.readingTimeText}</span>
-        </div>
-
-        <div className="prose-content mt-10">
-          <MDXRemote source={post.content} />
-        </div>
-
-        {post.tags?.length > 0 && (
-          <div className="mt-10 flex flex-wrap gap-2 border-t border-navy-900/10 pt-6">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-navy-950/5 px-3 py-1 text-xs font-medium text-slate-600"
-              >
-                #{tag}
-              </span>
-            ))}
+      <div className="mt-8 grid gap-12 lg:grid-cols-3">
+        <article className="lg:col-span-2">
+          <span className="text-sm font-semibold uppercase tracking-wide text-accent-500">
+            {getCategoryLabel(post.category, locale)}
+          </span>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-navy-950 sm:text-4xl">
+            {post.title}
+          </h1>
+          <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
+            <time dateTime={post.date}>
+              {new Date(post.date).toLocaleDateString(
+                locale === "en" ? "en-US" : "tr-TR",
+                { year: "numeric", month: "long", day: "numeric" }
+              )}
+            </time>
+            <span>·</span>
+            <span>{post.readingTimeText}</span>
           </div>
-        )}
-      </article>
+
+          <AdBanner label="Reklam Alanı" className="mt-8" />
+
+          <div className="prose-content mt-10">
+            <MDXRemote source={firstHalf} />
+          </div>
+
+          {secondHalf && (
+            <>
+              <InlineAd />
+              <div className="prose-content">
+                <MDXRemote source={secondHalf} />
+              </div>
+            </>
+          )}
+
+          {post.tags?.length > 0 && (
+            <div className="mt-10 flex flex-wrap gap-2 border-t border-navy-900/10 pt-6">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-navy-950/5 px-3 py-1 text-xs font-medium text-slate-600"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <div className="mt-8 border-t border-navy-900/10 pt-6">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              {tCommon("share")}
+            </p>
+            <ShareButtons url={postUrl} title={post.title} trackEventName="blog_share" />
+          </div>
+
+          <AdBanner label="Reklam Alanı" className="mt-10" />
+        </article>
+
+        <aside className="space-y-8 lg:col-span-1">
+          <SidebarAd />
+          <NewsletterCard />
+        </aside>
+      </div>
     </Container>
   );
 }

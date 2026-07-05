@@ -1,83 +1,68 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/content/site";
 
 const copy = {
   tr: {
-    eyebrow: "KVKK / Gizlilik Politikası",
-    title: "Kişisel Verilerin Korunması ve Gizlilik Politikası",
+    eyebrow: "Gizlilik Politikası",
+    title: "Gizlilik Politikası",
+    intro:
+      "Bu sayfa, sitemizi ziyaret ettiğinizde kişisel verilerinizin nasıl korunduğuna dair genel bir özet sunar. Kişisel verilerinizin işlenmesine ilişkin ayrıntılı ve resmi bilgilendirme için KVKK Aydınlatma Metni'ni, çerez kullanımımız için ise Çerez Politikası'nı inceleyebilirsiniz.",
     sections: [
       {
-        title: "1. Veri Sorumlusu",
-        body: `Bu internet sitesi (${siteConfig.url}), veri sorumlusu sıfatıyla ${siteConfig.name} tarafından işletilmektedir. Sitede yer alan iletişim formu aracılığıyla paylaştığınız kişisel veriler, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında işlenmektedir.`,
+        title: "Hangi Verileri Topluyoruz?",
+        body: "İletişim formu, bülten aboneliği veya etkinlik kaydı doldurduğunuzda ad-soyad, e-posta, telefon ve mesaj içeriğiniz gibi bilgileri topluyoruz. Ayrıca onay vermeniz halinde site kullanımınıza dair anonim istatistikler (ziyaret sayısı, en çok okunan sayfalar, cihaz/tarayıcı bilgisi) analitik araçlar üzerinden toplanabilir.",
       },
       {
-        title: "2. İşlenen Kişisel Veriler",
-        body: "İletişim formu üzerinden ad-soyad, e-posta adresi, kurum bilgisi ve mesaj içeriğiniz tarafımıza iletilir. Site kullanımına ilişkin teknik veriler (IP adresi, tarayıcı bilgisi, ziyaret istatistikleri) Google Analytics gibi analiz araçları üzerinden anonim/toplulaştırılmış şekilde işlenebilir.",
+        title: "Verilerinizi Kimlerle Paylaşıyoruz?",
+        body: "Verileriniz yalnızca hizmetin sağlanması için gerekli üçüncü taraflarla (e-posta altyapı sağlayıcısı Resend, barındırma sağlayıcısı Vercel, onay vermeniz halinde Google Analytics/Clarity/AdSense) paylaşılır. Pazarlama amacıyla satılmaz veya kiralanmaz.",
       },
       {
-        title: "3. İşleme Amaçları",
-        body: "Kişisel verileriniz; tarafınızla iletişime geçilmesi, danışmanlık/hizmet taleplerinin değerlendirilmesi ve site kullanım deneyiminin analiz edilerek iyileştirilmesi amaçlarıyla işlenmektedir.",
+        title: "Güvenlik",
+        body: "Site HTTPS üzerinden yayın yapar, formlarımız spam ve kötüye kullanıma karşı ek koruma (reCAPTCHA, rate limiting) içerir. Yönetim paneline erişim şifre ve yetkilendirme ile korunmaktadır.",
       },
       {
-        title: "4. Hukuki Sebep",
-        body: "Kişisel verileriniz, KVKK madde 5/2 kapsamında açık rızanız (iletişim formunu doldurmanız) ve meşru menfaat hukuki sebeplerine dayanılarak işlenmektedir.",
+        title: "Haklarınız",
+        body: "KVKK kapsamındaki haklarınızın tam listesi için KVKK Aydınlatma Metni sayfasını inceleyebilir, taleplerinizi aşağıdaki e-posta adresinden iletebilirsiniz.",
       },
-      {
-        title: "5. Üçüncü Taraflarla Paylaşım",
-        body: "İletişim formu verileriniz, e-posta iletimini sağlamak amacıyla Resend gibi e-posta altyapı sağlayıcılarına; site barındırma hizmeti kapsamında Vercel gibi hizmet sağlayıcılara aktarılabilir. Verileriniz pazarlama amacıyla üçüncü taraflarla paylaşılmaz veya satılmaz.",
-      },
-      {
-        title: "6. Çerezler (Cookies)",
-        body: "Site, temel işlevsellik ve ziyaretçi istatistikleri için çerezler kullanabilir. Tarayıcı ayarlarınızdan çerez tercihlerinizi yönetebilirsiniz.",
-      },
-      {
-        title: "7. Veri Saklama Süresi",
-        body: "İletişim formu aracılığıyla iletilen veriler, talebinizin değerlendirilmesi için gerekli süre boyunca ve yasal saklama yükümlülükleri çerçevesinde saklanır; bu süre sonunda silinir veya anonimleştirilir.",
-      },
-      {
-        title: "8. KVKK Kapsamındaki Haklarınız",
-        body: `KVKK madde 11 uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını öğrenme, yurt içi/yurt dışında aktarıldığı üçüncü kişileri öğrenme, eksik/yanlış işlenmişse düzeltilmesini isteme, silinmesini/yok edilmesini isteme ve itiraz etme haklarına sahipsiniz. Bu haklarınızı kullanmak için ${siteConfig.email} adresinden bizimle iletişime geçebilirsiniz.`,
-      },
+    ],
+    linksTitle: "İlgili Sayfalar",
+    links: [
+      { href: "/kvkk-aydinlatma-metni", label: "KVKK Aydınlatma Metni" },
+      { href: "/cerez-politikasi", label: "Çerez Politikası" },
+      { href: "/kullanim-sartlari", label: "Kullanım Şartları" },
     ],
   },
   en: {
-    eyebrow: "KVKK / Privacy Policy",
-    title: "Personal Data Protection and Privacy Policy",
+    eyebrow: "Privacy Policy",
+    title: "Privacy Policy",
+    intro:
+      "This page provides a general summary of how your personal data is protected when you visit our site. For detailed and formal information about the processing of your personal data, see the KVKK Privacy Notice; for our cookie usage, see the Cookie Policy.",
     sections: [
       {
-        title: "1. Data Controller",
-        body: `This website (${siteConfig.url}) is operated by ${siteConfig.name} as the data controller. Personal data you share via the contact form is processed in accordance with the Turkish Personal Data Protection Law No. 6698 ("KVKK").`,
+        title: "What Data We Collect",
+        body: "When you fill out the contact form, subscribe to the newsletter, or register for an event, we collect information such as your name, email, phone, and message content. If you consent, anonymous usage statistics (visit counts, most-read pages, device/browser information) may also be collected via analytics tools.",
       },
       {
-        title: "2. Data We Process",
-        body: "Through the contact form, we receive your name, email address, company information and message content. Technical usage data (IP address, browser information, visit statistics) may be processed in an anonymized/aggregated form via analytics tools such as Google Analytics.",
+        title: "Who We Share Your Data With",
+        body: "Your data is only shared with third parties necessary to provide the service (email infrastructure provider Resend, hosting provider Vercel, and, with your consent, Google Analytics/Clarity/AdSense). It is not sold or rented for marketing purposes.",
       },
       {
-        title: "3. Purposes of Processing",
-        body: "Your personal data is processed to contact you, evaluate consulting/service requests, and analyze and improve the site experience.",
+        title: "Security",
+        body: "The site is served over HTTPS, and our forms include additional protection against spam and abuse (reCAPTCHA, rate limiting). Access to the admin panel is protected with a password and authorization.",
       },
       {
-        title: "4. Legal Basis",
-        body: "Your personal data is processed based on your explicit consent (submitting the contact form) and legitimate interest grounds under Article 5/2 of the KVKK.",
+        title: "Your Rights",
+        body: "For the full list of your rights under the KVKK, please see the KVKK Privacy Notice page. You can send your requests to the email address below.",
       },
-      {
-        title: "5. Sharing With Third Parties",
-        body: "Contact form data may be transferred to email infrastructure providers such as Resend to deliver emails, and to hosting providers such as Vercel. Your data is not shared with or sold to third parties for marketing purposes.",
-      },
-      {
-        title: "6. Cookies",
-        body: "The site may use cookies for core functionality and visitor statistics. You can manage your cookie preferences through your browser settings.",
-      },
-      {
-        title: "7. Data Retention",
-        body: "Data submitted via the contact form is retained for as long as necessary to evaluate your request and in line with legal retention obligations, after which it is deleted or anonymized.",
-      },
-      {
-        title: "8. Your Rights Under KVKK",
-        body: `Under Article 11 of the KVKK, you have the right to learn whether your personal data is processed, request information about it, learn its purpose, learn third parties to whom it is transferred domestically/abroad, request correction if processed incorrectly, request deletion/destruction, and object to processing. You can contact us at ${siteConfig.email} to exercise these rights.`,
-      },
+    ],
+    linksTitle: "Related Pages",
+    links: [
+      { href: "/kvkk-aydinlatma-metni", label: "KVKK Privacy Notice" },
+      { href: "/cerez-politikasi", label: "Cookie Policy" },
+      { href: "/kullanim-sartlari", label: "Terms of Use" },
     ],
   },
 };
@@ -89,7 +74,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const c = copy[locale as keyof typeof copy] ?? copy.tr;
-  return { title: c.eyebrow };
+  return { title: c.eyebrow, description: c.intro };
 }
 
 export default async function PrivacyPage({
@@ -102,7 +87,7 @@ export default async function PrivacyPage({
 
   return (
     <Container className="py-16 sm:py-20">
-      <SectionHeading eyebrow={c.eyebrow} title={c.title} />
+      <SectionHeading eyebrow={c.eyebrow} title={c.title} subtitle={c.intro} />
 
       <div className="prose-content mt-10 max-w-3xl">
         {c.sections.map((section) => (
@@ -111,6 +96,27 @@ export default async function PrivacyPage({
             <p>{section.body}</p>
           </div>
         ))}
+        <p>
+          {siteConfig.email}
+        </p>
+      </div>
+
+      <div className="mt-10 max-w-3xl rounded-2xl border border-navy-900/10 bg-slate-50 p-6">
+        <h3 className="text-sm font-semibold uppercase tracking-wide text-navy-950">
+          {c.linksTitle}
+        </h3>
+        <ul className="mt-3 space-y-2">
+          {c.links.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className="text-sm font-medium text-accent-500 hover:text-navy-900"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </Container>
   );

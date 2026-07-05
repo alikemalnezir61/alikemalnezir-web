@@ -1,0 +1,148 @@
+backend:
+  name: github
+  repo: OWNER/REPO
+  branch: main
+  base_url: https://alikemalnezir.com
+  auth_endpoint: api/decap/auth
+
+local_backend: true
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "blog_tr"
+    label: "Blog (Türkçe)"
+    folder: "content/blog/tr"
+    create: true
+    slug: "{{slug}}"
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Kısa Açıklama", name: "description", widget: "text" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Proje Yönetimi", value: "proje-yonetimi" }
+          - { label: "IT Operasyonları", value: "it-operasyonlari" }
+          - { label: "Dijital Dönüşüm", value: "dijital-donusum" }
+          - { label: "Sağlık Bilişimi", value: "saglik-bilisimi" }
+          - { label: "PMO", value: "pmo" }
+          - { label: "ITSM", value: "itsm" }
+          - { label: "Liderlik", value: "liderlik" }
+          - { label: "Yapay Zeka ve Proje Yönetimi", value: "yapay-zeka-ve-proje-yonetimi" }
+      - { label: "Etiketler", name: "tags", widget: "list", default: [] }
+      - { label: "SEO Başlığı", name: "seoTitle", widget: "string", required: false }
+      - { label: "SEO Açıklaması", name: "seoDescription", widget: "text", required: false }
+      - { label: "Kapak Görseli", name: "coverImage", widget: "image", required: false }
+      - { label: "Taslak Olarak Kaydet", name: "draft", widget: "boolean", default: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  - name: "blog_en"
+    label: "Blog (English)"
+    folder: "content/blog/en"
+    create: true
+    slug: "{{slug}}"
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Project Management", value: "proje-yonetimi" }
+          - { label: "IT Operations", value: "it-operasyonlari" }
+          - { label: "Digital Transformation", value: "dijital-donusum" }
+          - { label: "Healthcare Informatics", value: "saglik-bilisimi" }
+          - { label: "PMO", value: "pmo" }
+          - { label: "ITSM", value: "itsm" }
+          - { label: "Leadership", value: "liderlik" }
+          - { label: "AI & Project Management", value: "yapay-zeka-ve-proje-yonetimi" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "SEO Title", name: "seoTitle", widget: "string", required: false }
+      - { label: "SEO Description", name: "seoDescription", widget: "text", required: false }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
+      - { label: "Save as Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "events_tr"
+    label: "Etkinlikler (Türkçe)"
+    folder: "content/events/tr"
+    create: true
+    slug: "{{slug}}"
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Etkinlik Adı", name: "title", widget: "string" }
+      - { label: "Kısa Açıklama", name: "description", widget: "text" }
+      - { label: "Tarih", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Saat", name: "time", widget: "string", required: false, hint: "Örn. 14:00" }
+      - { label: "Lokasyon", name: "location", widget: "string", hint: "Örn. İstanbul, Türkiye ya da Online" }
+      - { label: "Online Etkinlik mi?", name: "isOnline", widget: "boolean", default: false }
+      - { label: "Konuşmacılar", name: "speakers", widget: "list", required: false, default: [] }
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Konferans", value: "konferans" }
+          - { label: "Webinar", value: "webinar" }
+          - { label: "Çalıştay", value: "calistay" }
+          - { label: "Panel", value: "panel" }
+          - { label: "Eğitim", value: "egitim" }
+          - { label: "Networking", value: "networking" }
+      - { label: "Kapak Görseli", name: "coverImage", widget: "image", required: false }
+      - { label: "Kayıt Linki", name: "registrationUrl", widget: "string", required: false }
+      - label: "Etkinlik Durumu"
+        name: "status"
+        widget: "select"
+        default: "upcoming"
+        options:
+          - { label: "Yaklaşan", value: "upcoming" }
+          - { label: "Tamamlandı", value: "completed" }
+          - { label: "İptal Edildi", value: "cancelled" }
+      - { label: "Taslak Olarak Kaydet", name: "draft", widget: "boolean", default: false }
+      - { label: "Detaylı Açıklama", name: "body", widget: "markdown" }
+
+  - name: "events_en"
+    label: "Events (English)"
+    folder: "content/events/en"
+    create: true
+    slug: "{{slug}}"
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Event Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Time", name: "time", widget: "string", required: false, hint: "e.g. 14:00" }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Istanbul, Turkey or Online" }
+      - { label: "Is Online?", name: "isOnline", widget: "boolean", default: false }
+      - { label: "Speakers", name: "speakers", widget: "list", required: false, default: [] }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Conference", value: "konferans" }
+          - { label: "Webinar", value: "webinar" }
+          - { label: "Workshop", value: "calistay" }
+          - { label: "Panel", value: "panel" }
+          - { label: "Training", value: "egitim" }
+          - { label: "Networking", value: "networking" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
+      - { label: "Registration Link", name: "registrationUrl", widget: "string", required: false }
+      - label: "Event Status"
+        name: "status"
+        widget: "select"
+        default: "upcoming"
+        options:
+          - { label: "Upcoming", value: "upcoming" }
+          - { label: "Completed", value: "completed" }
+          - { label: "Cancelled", value: "cancelled" }
+      - { label: "Save as Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Detailed Description", name: "body", widget: "markdown" }

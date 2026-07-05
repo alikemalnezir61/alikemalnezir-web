@@ -13,6 +13,11 @@ import {
   ShieldCheck,
   Wrench,
   Users,
+  Code2,
+  Network,
+  Clock,
+  Award,
+  Layers,
   type LucideIcon,
 } from "lucide-react";
 
@@ -31,6 +36,11 @@ const iconMap: Record<string, LucideIcon> = {
   ShieldCheck,
   Wrench,
   Users,
+  Code2,
+  Network,
+  Clock,
+  Award,
+  Layers,
 };
 
 export function Icon({ name, className }: { name: string; className?: string }) {

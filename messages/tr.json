@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Ali Kemal Nezir",
-    "defaultTitle": "Ali Kemal Nezir | Teknik Proje Yöneticisi",
-    "defaultDescription": "IT projeleri, sağlık bilişimi, kritik altyapı ve dijital dönüşüm alanlarında 10+ yıllık deneyime sahip Teknik Proje Yöneticisi Ali Kemal Nezir'in kişisel web sitesi."
+    "defaultTitle": "Ali Kemal Nezir | Proje Yöneticisi",
+    "defaultDescription": "IT projeleri, sağlık bilişimi, kritik altyapı ve dijital dönüşüm alanlarında 10+ yıllık deneyime sahip Proje Yöneticisi Ali Kemal Nezir'in kişisel web sitesi."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -10,6 +10,7 @@
     "experience": "Deneyimlerim",
     "approach": "Proje Yönetimi Yaklaşımım",
     "blog": "Blog",
+    "events": "Etkinlikler",
     "services": "Hizmetler",
     "certifications": "Sertifikalar",
     "contact": "İletişim",
@@ -26,11 +27,12 @@
     "minRead": "dk okuma",
     "allCategories": "Tüm Kategoriler",
     "downloadCv": "CV İndir",
-    "viewLinkedin": "LinkedIn Profilim"
+    "viewLinkedin": "LinkedIn Profilim",
+    "share": "Paylaş"
   },
   "home": {
     "hero": {
-      "eyebrow": "Teknik Proje Yöneticisi",
+      "eyebrow": "Proje Yöneticisi",
       "title": "Karmaşık IT ve Altyapı Projelerini Sonuca Ulaştırıyorum",
       "subtitle": "10 yılı aşkın süredir sağlık bilişimi, kritik altyapı ve dijital dönüşüm projelerinde uçtan uca proje yönetimi, PMO kurulumu ve operasyonel süreç iyileştirme konularında kurumlara değer katıyorum.",
       "primaryCta": "Deneyimlerimi İncele",
@@ -39,7 +41,7 @@
     },
     "intro": {
       "title": "Kısaca Ben",
-      "body": "PMP sertifikalı bir Teknik Proje Yöneticisiyim. Kariyerim boyunca büyük ölçekli sağlık kurumları ve kritik altyapı projelerinde; ICT proje yönetimi, HBYS entegrasyonu, veri merkezi operasyonları ve ekip yönetimi konularında sorumluluk üstlendim. Agile ve klasik proje yönetimi yaklaşımlarını bir arada kullanarak, teknik ekiplerle yönetim kademesi arasında köprü kuruyorum."
+      "body": "PMP sertifikalı bir Proje Yöneticisiyim. Kariyerim boyunca büyük ölçekli sağlık kurumları ve kritik altyapı projelerinde; ICT proje yönetimi, HBYS entegrasyonu, veri merkezi operasyonları ve ekip yönetimi konularında sorumluluk üstlendim. Agile ve klasik proje yönetimi yaklaşımlarını bir arada kullanarak, teknik ekiplerle yönetim kademesi arasında köprü kuruyorum."
     },
     "expertise": {
       "title": "Uzmanlık Alanlarım",
@@ -66,11 +68,15 @@
     }
   },
   "footer": {
-    "tagline": "Teknik Proje Yöneticisi — IT, Sağlık Bilişimi ve Kritik Altyapı Projeleri",
+    "tagline": "Proje Yöneticisi — IT, Sağlık Bilişimi ve Kritik Altyapı Projeleri",
     "quickLinks": "Hızlı Bağlantılar",
     "contact": "İletişim",
     "rights": "Tüm hakları saklıdır.",
-    "privacy": "KVKK / Gizlilik Politikası"
+    "privacy": "Gizlilik Politikası",
+    "kvkk": "KVKK Aydınlatma Metni",
+    "cookiePolicy": "Çerez Politikası",
+    "termsOfUse": "Kullanım Şartları",
+    "cookiePreferences": "Çerez Tercihleri"
   },
   "contact": {
     "title": "İletişim",
@@ -78,16 +84,46 @@
     "form": {
       "name": "Ad Soyad",
       "email": "E-posta",
+      "phone": "Telefon (opsiyonel)",
       "company": "Kurum (opsiyonel)",
+      "requestType": "Talep Türü",
+      "requestTypeOptions": {
+        "consulting": "Proje Yönetimi Danışmanlığı",
+        "speaking": "Etkinlik / Konuşmacı Daveti",
+        "collaboration": "Blog / İş Birliği",
+        "training": "Eğitim Talebi",
+        "other": "Diğer"
+      },
       "subject": "Konu",
       "message": "Mesajınız",
+      "kvkkConsent": "Kişisel verilerimin KVKK Aydınlatma Metni kapsamında işlenmesini kabul ediyorum.",
       "submit": "Gönder",
       "success": "Mesajınız alındı, en kısa sürede dönüş yapacağım.",
-      "error": "Bir hata oluştu, lütfen tekrar deneyin veya doğrudan e-posta gönderin."
+      "error": "Bir hata oluştu, lütfen tekrar deneyin veya doğrudan e-posta gönderin.",
+      "rateLimited": "Çok fazla deneme yaptınız, lütfen daha sonra tekrar deneyin.",
+      "consentRequired": "Devam etmek için KVKK onayını işaretlemeniz gerekiyor."
     },
     "directEmail": "E-posta",
     "location": "Konum",
     "locationValue": "İstanbul, Türkiye"
+  },
+  "newsletter": {
+    "title": "Bültenime Abone Olun",
+    "subtitle": "Blog yazılarımdan ve etkinlik duyurularımdan haberdar olun.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "interest": "İlgi Alanı",
+    "interestOptions": {
+      "blog": "Blog",
+      "events": "Etkinlik",
+      "projectManagement": "Proje Yönetimi",
+      "digitalTransformation": "Dijital Dönüşüm"
+    },
+    "kvkkConsent": "Kişisel verilerimin KVKK kapsamında işlenmesini ve bülten gönderimi için kullanılmasını kabul ediyorum.",
+    "submit": "Abone Ol",
+    "success": "Aboneliğiniz alındı, teşekkürler!",
+    "error": "Bir hata oluştu, lütfen tekrar deneyin.",
+    "consentRequired": "Devam etmek için KVKK onayını işaretlemeniz gerekiyor."
   },
   "blog": {
     "title": "Blog",
@@ -96,5 +132,48 @@
     "publishedOn": "Yayın Tarihi",
     "tags": "Etiketler",
     "empty": "Bu kategoride henüz yazı bulunmuyor."
+  },
+  "sponsors": {
+    "homeTitle": "Sponsorlar ve İş Birlikleri",
+    "homeSubtitle": "Kurumsal içerik üretimi ve etkinliklerde iş birliği yaptığım kuruluşlar.",
+    "homePlaceholder": "Bu alanda sponsor olabilirsiniz — iletişime geçin",
+    "eventTitle": "Etkinlik Sponsorları",
+    "eventPlaceholder": "Bu etkinliğe sponsor olabilirsiniz"
+  },
+  "cookieBanner": {
+    "message": "Sitede deneyiminizi iyileştirmek için çerezler kullanıyoruz. Zorunlu çerezler her zaman aktiftir; analitik ve reklam çerezleri için onayınızı alıyoruz. Detaylar için",
+    "linkLabel": "Çerez Politikası",
+    "messageSuffix": "'nı inceleyebilirsiniz.",
+    "necessaryOnly": "Sadece Zorunlu",
+    "managePreferences": "Tercihleri Yönet",
+    "acceptAll": "Tümünü Kabul Et"
+  },
+  "cookieModal": {
+    "title": "Çerez Tercihleri",
+    "close": "Kapat",
+    "description": "Zorunlu çerezler sitenin çalışması için her zaman aktiftir. Diğer kategorileri dilediğiniz gibi açıp kapatabilirsiniz.",
+    "necessaryTitle": "Zorunlu Çerezler",
+    "necessaryDescription": "Sitenin temel işlevleri için gereklidir, kapatılamaz.",
+    "alwaysOn": "Her Zaman Açık",
+    "analyticsTitle": "Analitik Çerezler",
+    "analyticsDescription": "Google Analytics (GA4) ve Microsoft Clarity ile ziyaretçi davranışlarını anonim olarak analiz etmemizi sağlar.",
+    "advertisingTitle": "Reklam Çerezleri",
+    "advertisingDescription": "Google AdSense gibi reklam sağlayıcılarının size uygun reklam göstermesini sağlar.",
+    "marketingTitle": "Pazarlama Çerezleri",
+    "marketingDescription": "Bülten aboneliği ve pazarlama iletişimlerinin kişiselleştirilmesinde kullanılır.",
+    "acceptAll": "Tümünü Kabul Et",
+    "savePreferences": "Tercihleri Kaydet",
+    "necessaryOnly": "Sadece Zorunlu"
+  },
+  "events": {
+    "filters": {
+      "all": "Tümü",
+      "upcoming": "Yaklaşan Etkinlikler",
+      "past": "Geçmiş Etkinlikler",
+      "online": "Online Etkinlikler",
+      "physical": "Fiziksel Etkinlikler"
+    },
+    "backToEvents": "Etkinliklere Dön",
+    "sponsors": "Sponsorlar"
   }
 }

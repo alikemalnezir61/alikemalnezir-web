@@ -18,6 +18,7 @@ export function Header() {
     { href: "/deneyimlerim", label: t("experience") },
     { href: "/proje-yonetimi-yaklasimim", label: t("approach") },
     { href: "/blog", label: t("blog") },
+    { href: "/etkinlikler", label: t("events") },
     { href: "/hizmetler", label: t("services") },
     { href: "/sertifikalar", label: t("certifications") },
   ];
@@ -30,7 +31,7 @@ export function Header() {
           <span className="hidden text-sm font-semibold text-navy-950 sm:block">
             Ali Kemal Nezir
             <span className="block text-xs font-normal text-slate-500">
-              Teknik Proje Yöneticisi
+              Proje Yöneticisi
             </span>
           </span>
         </Link>
