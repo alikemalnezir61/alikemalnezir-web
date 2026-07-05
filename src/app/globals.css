@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #101828;
+
+  --color-navy-950: #05101f;
+  --color-navy-900: #0a1a30;
+  --color-navy-800: #0f2744;
+  --color-navy-700: #16365c;
+  --color-navy-600: #1f4670;
+  --color-navy-500: #2c5a8a;
+
+  --color-accent-500: #2f7de1;
+  --color-accent-400: #4f94ee;
+  --color-accent-300: #8fbcf5;
+
+  --color-slate-925: #0c1220;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-navy-950: var(--color-navy-950);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-600: var(--color-navy-600);
+  --color-navy-500: var(--color-navy-500);
+
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-300: var(--color-accent-300);
+
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.prose-content h2 {
+  @apply text-2xl font-semibold text-navy-900 mt-10 mb-4;
+}
+
+.prose-content h3 {
+  @apply text-xl font-semibold text-navy-900 mt-8 mb-3;
+}
+
+.prose-content p {
+  @apply text-slate-700 leading-7 mb-4;
+}
+
+.prose-content ul {
+  @apply list-disc pl-6 mb-4 space-y-2 text-slate-700;
+}
+
+.prose-content a {
+  @apply text-accent-500 underline underline-offset-2 hover:text-navy-700;
+}
+
+.prose-content strong {
+  @apply text-navy-900;
+}

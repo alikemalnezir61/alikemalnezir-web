@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "siteName": "Ali Kemal Nezir",
+    "defaultTitle": "Ali Kemal Nezir | Technical Project Manager",
+    "defaultDescription": "Personal website of Ali Kemal Nezir, a Technical Project Manager with 10+ years of experience in IT projects, healthcare informatics, critical infrastructure and digital transformation."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "approach": "My PM Approach",
+    "blog": "Blog",
+    "services": "Services",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "getInTouch": "Get In Touch",
+    "sendMessage": "Send Message",
+    "learnMore": "Learn More",
+    "backToBlog": "Back to Blog",
+    "minRead": "min read",
+    "allCategories": "All Categories",
+    "downloadCv": "Download CV",
+    "viewLinkedin": "View LinkedIn"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Technical Project Manager",
+      "title": "Delivering Complex IT and Infrastructure Projects",
+      "subtitle": "For over 10 years, I have been creating value for organizations in healthcare informatics, critical infrastructure and digital transformation projects — from end-to-end project management to PMO setup and operational process improvement.",
+      "primaryCta": "View My Experience",
+      "secondaryCta": "Get In Touch",
+      "badges": ["PMP® Certified", "10+ Years in Healthcare IT & Infrastructure", "Critical Infrastructure Projects"]
+    },
+    "intro": {
+      "title": "About Me",
+      "body": "I am a PMP-certified Technical Project Manager. Throughout my career, I have taken responsibility in ICT project management, HIS integration, data center operations and team leadership across large-scale healthcare institutions and critical infrastructure projects. I combine Agile and traditional project management approaches to bridge the gap between technical teams and executive management."
+    },
+    "expertise": {
+      "title": "Areas of Expertise",
+      "subtitle": "Core areas where I create value in enterprise projects"
+    },
+    "featuredBlog": {
+      "title": "Featured Articles",
+      "subtitle": "Recent content on project management and technology"
+    },
+    "experienceSummary": {
+      "title": "Experience Summary",
+      "subtitle": "Roles I have taken on critical projects",
+      "cta": "View Full Experience"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Internationally recognized credentials",
+      "cta": "View All Certifications"
+    },
+    "cta": {
+      "title": "Have a Project in Mind?",
+      "subtitle": "Let's work together on your enterprise projects, PMO setup, or digital transformation initiatives.",
+      "button": "Get In Touch Now"
+    }
+  },
+  "footer": {
+    "tagline": "Technical Project Manager — IT, Healthcare Informatics and Critical Infrastructure Projects",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "For project consulting, PMO setup or collaboration inquiries, fill out the form or email me directly.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send",
+      "success": "Your message has been received, I'll get back to you shortly.",
+      "error": "Something went wrong, please try again or email me directly."
+    },
+    "directEmail": "Email",
+    "location": "Location",
+    "locationValue": "Istanbul, Turkey"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles on project management, IT operations, digital transformation and more",
+    "categoryTitle": "Category",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "empty": "No articles in this category yet."
+  }
+}
