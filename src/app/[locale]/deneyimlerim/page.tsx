@@ -11,6 +11,9 @@ const copy = {
   tr: {
     eyebrow: "Kariyer",
     heroTitle: "Profesyonel Deneyim",
+    seoTitle: "Deneyimlerim – 10+ Yıllık Proje Yönetimi Kariyeri",
+    seoDescription:
+      "IT, sağlık bilişimi, kritik altyapı ve dijital dönüşüm alanlarında 10+ yıllık proje yönetimi deneyimim, üstlendiğim roller ve tamamladığım büyük ölçekli projeler.",
     heroSubtitle:
       "10+ yıllık bilgi teknolojileri, proje yönetimi ve dijital dönüşüm yolculuğum.",
     stats: [
@@ -30,6 +33,9 @@ const copy = {
   en: {
     eyebrow: "Career",
     heroTitle: "Professional Experience",
+    seoTitle: "Experience – 10+ Years in Project Management",
+    seoDescription:
+      "My 10+ year project management career across IT, healthcare informatics, critical infrastructure and digital transformation — roles held and large-scale projects delivered.",
     heroSubtitle:
       "My 10+ year journey in information technology, project management and digital transformation.",
     stats: [
@@ -55,7 +61,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const c = copy[locale as keyof typeof copy] ?? copy.tr;
-  return { title: c.heroTitle, description: c.heroSubtitle };
+  return { title: c.seoTitle, description: c.seoDescription };
 }
 
 export default async function ExperiencePage({

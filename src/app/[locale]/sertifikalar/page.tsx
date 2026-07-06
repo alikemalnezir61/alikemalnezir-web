@@ -8,6 +8,9 @@ const copy = {
   tr: {
     eyebrow: "Sertifikalar",
     title: "Uluslararası Standartlarda Belgelenmiş Yetkinlikler",
+    seoTitle: "Sertifikalarım – PMP® ve Proje Yönetimi Eğitimleri",
+    seoDescription:
+      "PMP® (Project Management Professional) başta olmak üzere proje yönetimi ve ilgili alanlarda aldığım uluslararası sertifikalar ve eğitim programları.",
     subtitle:
       "Proje yönetimi ve ilgili alanlarda aldığım sertifika ve eğitimler.",
     otherTitle: "Diğer Eğitimler ve Sertifikalar",
@@ -15,6 +18,9 @@ const copy = {
   en: {
     eyebrow: "Certifications",
     title: "Internationally Recognized Credentials",
+    seoTitle: "Certifications – PMP® & Project Management Training",
+    seoDescription:
+      "My internationally recognized certifications, led by PMP® (Project Management Professional), along with training programs in project management and related fields.",
     subtitle:
       "Certifications and training programs I have completed in project management and related fields.",
     otherTitle: "Other Trainings and Certifications",
@@ -28,7 +34,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const c = copy[locale as keyof typeof copy] ?? copy.tr;
-  return { title: c.eyebrow, description: c.subtitle };
+  return { title: c.seoTitle, description: c.seoDescription };
 }
 
 export default async function CertificationsPage({

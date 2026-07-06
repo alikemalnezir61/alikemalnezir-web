@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Ali Kemal Nezir",
-    "defaultTitle": "Ali Kemal Nezir | Project Manager",
-    "defaultDescription": "Personal website of Ali Kemal Nezir, a Project Manager with 10+ years of experience in IT projects, healthcare informatics, critical infrastructure and digital transformation."
+    "defaultTitle": "Ali Kemal Nezir | PMP® Project Manager – Istanbul",
+    "defaultDescription": "PMP®-certified Project Manager Ali Kemal Nezir – 10+ years of experience in IT, healthcare informatics, critical infrastructure, digital transformation and PMO consulting."
   },
   "nav": {
     "home": "Home",
@@ -28,7 +28,8 @@
     "allCategories": "All Categories",
     "downloadCv": "Download CV",
     "viewLinkedin": "View LinkedIn",
-    "share": "Share"
+    "share": "Share",
+    "relatedPosts": "Related Articles"
   },
   "home": {
     "hero": {
@@ -81,6 +82,8 @@
   "contact": {
     "title": "Contact",
     "subtitle": "For project consulting, PMO setup or collaboration inquiries, fill out the form or email me directly.",
+    "seoTitle": "Contact – Project Management Consulting",
+    "seoDescription": "Get in touch with Ali Kemal Nezir for project management consulting, PMO setup, speaking invitations, or collaboration opportunities.",
     "form": {
       "name": "Full Name",
       "email": "Email",
@@ -128,6 +131,8 @@
   "blog": {
     "title": "Blog",
     "subtitle": "Articles on project management, IT operations, digital transformation and more",
+    "seoTitle": "Blog – Project Management, IT & Digital Transformation",
+    "seoDescription": "Articles and practical insights on project management, IT operations, PMO, ITSM, healthcare informatics and digital transformation.",
     "categoryTitle": "Category",
     "publishedOn": "Published on",
     "tags": "Tags",

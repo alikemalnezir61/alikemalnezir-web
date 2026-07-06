@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { Link } from "@/i18n/navigation";
 import { services } from "@/content/services";
 import { Icon } from "@/lib/icon-map";
 
@@ -9,21 +10,29 @@ const copy = {
   tr: {
     eyebrow: "Hizmetler / Danışmanlık",
     title: "Kurumsal Projelerinizde Değer Yaratmak İçin Buradayım",
+    seoTitle: "Proje Yönetimi Danışmanlığı ve Hizmetlerim",
+    seoDescription:
+      "IT proje yönetimi, PMO kurulumu, sağlık bilişimi ve dijital dönüşüm danışmanlığı hizmetleri. Kurumsal projelerinize değer katacak proje yönetimi desteği.",
     subtitle:
       "Büyük ölçekli kurum projeleri, kritik altyapı projeleri ve sağlık teknolojisi projelerinde danışmanlık desteği sunuyorum.",
     ctaTitle: "Projenizi Konuşalım",
     ctaSubtitle:
       "İhtiyacınıza en uygun kapsam ve süreci birlikte belirleyelim.",
     ctaButton: "İletişime Geçin",
+    approachLink: "Proje yönetimi yaklaşımım hakkında daha fazla bilgi alın →",
   },
   en: {
     eyebrow: "Services / Consulting",
     title: "Here to Create Value in Your Enterprise Projects",
+    seoTitle: "Project Management Consulting & Services",
+    seoDescription:
+      "IT project management, PMO setup, healthcare informatics and digital transformation consulting services for your enterprise projects.",
     subtitle:
       "I provide consulting support for large-scale enterprise projects, critical infrastructure projects and healthcare technology projects.",
     ctaTitle: "Let's Talk About Your Project",
     ctaSubtitle: "Let's define the right scope and process together.",
     ctaButton: "Get In Touch",
+    approachLink: "Learn more about my project management approach →",
   },
 };
 
@@ -34,7 +43,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const c = copy[locale as keyof typeof copy] ?? copy.tr;
-  return { title: c.eyebrow, description: c.subtitle };
+  return { title: c.seoTitle, description: c.seoDescription };
 }
 
 export default async function ServicesPage({
@@ -48,6 +57,12 @@ export default async function ServicesPage({
   return (
     <Container className="py-16 sm:py-20">
       <SectionHeading eyebrow={c.eyebrow} title={c.title} subtitle={c.subtitle} />
+      <Link
+        href="/proje-yonetimi-yaklasimim"
+        className="mt-3 inline-block text-sm font-semibold text-accent-500 hover:text-navy-900"
+      >
+        {c.approachLink}
+      </Link>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (

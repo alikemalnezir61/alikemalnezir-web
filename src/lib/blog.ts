@@ -64,3 +64,15 @@ export function getPostsByCategory(locale: string, categorySlug: string): Post[]
 export function getFeaturedPosts(locale: string, count = 3): Post[] {
   return getAllPosts(locale).slice(0, count);
 }
+
+export function getRelatedPosts(
+  locale: string,
+  currentSlug: string,
+  category: string,
+  count = 3
+): Post[] {
+  const posts = getAllPosts(locale).filter((post) => post.slug !== currentSlug);
+  const sameCategory = posts.filter((post) => post.category === category);
+  const others = posts.filter((post) => post.category !== category);
+  return [...sameCategory, ...others].slice(0, count);
+}

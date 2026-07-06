@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Container } from "@/components/ui/Container";
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { getCategoryLabel } from "@/lib/categories";
 import { siteConfig } from "@/content/site";
 import { Link } from "@/i18n/navigation";
@@ -64,6 +65,7 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const relatedPosts = getRelatedPosts(locale, post.slug, post.category);
   const postUrl = `${siteConfig.url}/blog/${post.category}/${post.slug}`;
   const [firstHalf, secondHalf] = splitContentInHalf(post.content);
 
@@ -159,6 +161,8 @@ export default async function BlogPostPage({
             </p>
             <ShareButtons url={postUrl} title={post.title} trackEventName="blog_share" />
           </div>
+
+          <RelatedPosts posts={relatedPosts} locale={locale} title={tCommon("relatedPosts")} />
 
           <AdBanner label="Reklam Alanı" className="mt-10" />
         </article>

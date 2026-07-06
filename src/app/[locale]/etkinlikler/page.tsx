@@ -10,6 +10,9 @@ const copy = {
   tr: {
     eyebrow: "Etkinlikler",
     title: "Etkinlikler",
+    seoTitle: "Etkinlikler – Konferans, Webinar ve Eğitimler",
+    seoDescription:
+      "Proje yönetimi ve dijital dönüşüm alanında katıldığım, düzenlediğim konferans, webinar, çalıştay ve eğitim etkinlikleri.",
     subtitle:
       "Katıldığım, düzenlediğim veya duyurmak istediğim etkinlikler.",
     empty: "Bu filtreye uygun etkinlik bulunmuyor.",
@@ -17,6 +20,9 @@ const copy = {
   en: {
     eyebrow: "Events",
     title: "Events",
+    seoTitle: "Events – Conferences, Webinars & Trainings",
+    seoDescription:
+      "Conferences, webinars, workshops and training events I attend or organize in project management and digital transformation.",
     subtitle:
       "Events I'm attending, organizing, or want to announce.",
     empty: "No events match this filter.",
@@ -30,7 +36,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const c = copy[locale as keyof typeof copy] ?? copy.tr;
-  return { title: c.title, description: c.subtitle };
+  return { title: c.seoTitle, description: c.seoDescription };
 }
 
 export default async function EventsPage({

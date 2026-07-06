@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Ali Kemal Nezir",
-    "defaultTitle": "Ali Kemal Nezir | Proje Yöneticisi",
-    "defaultDescription": "IT projeleri, sağlık bilişimi, kritik altyapı ve dijital dönüşüm alanlarında 10+ yıllık deneyime sahip Proje Yöneticisi Ali Kemal Nezir'in kişisel web sitesi."
+    "defaultTitle": "Ali Kemal Nezir | Proje Yöneticisi (PMP®) – İstanbul",
+    "defaultDescription": "PMP® sertifikalı Proje Yöneticisi Ali Kemal Nezir – IT, sağlık bilişimi, kritik altyapı ve dijital dönüşüm projelerinde 10+ yıllık deneyim ve PMO danışmanlığı."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -28,7 +28,8 @@
     "allCategories": "Tüm Kategoriler",
     "downloadCv": "CV İndir",
     "viewLinkedin": "LinkedIn Profilim",
-    "share": "Paylaş"
+    "share": "Paylaş",
+    "relatedPosts": "İlgili Yazılar"
   },
   "home": {
     "hero": {
@@ -81,6 +82,8 @@
   "contact": {
     "title": "İletişim",
     "subtitle": "Proje danışmanlığı, PMO kurulumu veya işbirliği teklifleri için formu doldurabilir ya da doğrudan e-posta gönderebilirsiniz.",
+    "seoTitle": "İletişime Geçin – Proje Yönetimi Danışmanlığı",
+    "seoDescription": "Proje yönetimi danışmanlığı, PMO kurulumu, konuşmacı daveti veya iş birliği teklifleri için Ali Kemal Nezir ile iletişime geçin.",
     "form": {
       "name": "Ad Soyad",
       "email": "E-posta",
@@ -128,6 +131,8 @@
   "blog": {
     "title": "Blog",
     "subtitle": "Proje yönetimi, IT operasyonları, dijital dönüşüm ve daha fazlası üzerine yazılar",
+    "seoTitle": "Blog – Proje Yönetimi, IT ve Dijital Dönüşüm Yazıları",
+    "seoDescription": "Proje yönetimi, IT operasyonları, PMO, ITSM, sağlık bilişimi ve dijital dönüşüm üzerine güncel makaleler ve pratik bilgiler.",
     "categoryTitle": "Kategori",
     "publishedOn": "Yayın Tarihi",
     "tags": "Etiketler",
