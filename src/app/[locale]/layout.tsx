@@ -55,6 +55,9 @@ export async function generateMetadata({
       title: t("defaultTitle"),
       description: t("defaultDescription"),
     },
+    verification: {
+      google: "ZdCVGuQH1WUMoPJ66EPnrSfNZppr-KzFxxLIa3vr-bs",
+    },
   };
 }
 
